@@ -1,0 +1,26 @@
+{% load static %}
+    
+    {% include 'layouts/header.html' %}
+    <main>
+        <section class="carousel">
+            <div class="carousel-content">
+                <h1>Bienvenido a Pollería Marcus</h1>
+                <div class="btn-nav">
+                    <button id="prevBtn" class="carousel-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="nextBtn" class="carousel-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <p></p>
+                <a href="#" class="btn">Reservar ahora</a>
+                <a href="#" class="btn">Delivery</a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Resto del contenido de tu página -->
+
+    {% include 'layouts/footer.html' %}
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+

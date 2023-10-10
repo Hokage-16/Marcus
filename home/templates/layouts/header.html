@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Pollería Marcus</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e3c23b4d8b.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js'%}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo-marcus.png" alt="Logo de Tu Restaurante">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><button class="close-menu-button">X</button></li>
+                <li><a href="{% url 'inicio'%}">INICIO</a></li>
+                <li><a href="#">RESERVAR</a></li>
+                <li><a href="#">DELIVERY</a></li>
+                <li><a href="{% url 'blogs'%}">BLOG</a></li>
+                <li><a href="#">SOBRE NOSOTROS</a></li>
+    
+            </ul>
+        </nav>
+        <a href="#" class="virtual-menu-button">Carta Virtual</a>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    
+    {% block content%}
+
+    {% endblock %}
+
+
+
+
+
+</body>

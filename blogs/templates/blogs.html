@@ -1,0 +1,20 @@
+
+
+{% include 'layouts/header.html' %}
+<h2 class="blog-title">Blog</h2>
+<hr class="blog-divider">
+<div class="blog-posts-container">
+
+{%for blog in blog %}
+    <div class="blog-post">
+        <a  href=""><img src="{{blog.image}}" alt="Imagen del artículo 1"></a>
+        <h2>{{blog.title}}</h2>
+        <p>Fecha: <time datetime="2023-09-30">{{blog.publish_date}}</time></p>
+        <p>{{blog.description}}</p>
+        <a  href="">Leer más</a>
+    </div>
+{% endfor %}
+
+</div>
+
+{% include 'layouts/footer.html'%}

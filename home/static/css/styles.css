@@ -1,0 +1,373 @@
+*{
+    font-family: 'Open sans', sans-serif;
+    transition:  0.8s ease;
+}/* Resetear estilos por defecto del navegador */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+header {
+    background-color: #811616; /* Color de fondo del header */
+    color: #fff; /* Color del texto en el header */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 65px;
+    height: 65px;
+    padding: 10px 20px;
+}
+
+/* Estilos del logotipo */
+.logo img {
+    height: 60px; /* Ajusta el tamaño de tu logo según sea necesario */
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px 10px;
+}
+nav ul li :hover{
+    color: #f0a600;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 4500; /* Color del texto de los enlaces de navegación */
+}
+
+/* Estilos del botón de la carta virtual */
+.virtual-menu-button {
+    background-color: #e28200; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 7.45px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.virtual-menu-button:hover {
+    background-color: #f0a600; 
+ 
+}
+
+/* Estilos del menú desplegable */
+.menu-toggle {
+    display: none; /* Oculta el botón de hamburguesa en pantallas más grandes */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #e28200; /* Color de fondo del botón de hamburguesa */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Espacio entre el botón de hamburguesa y el logo */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+.close-menu-button {
+    display: none;
+}
+
+/* Estilos para mostrar el menú en pantallas pequeñas */
+@media screen and (max-width: 830px) {
+
+    .menu-toggle {
+        display: flex; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+    }
+
+    .menu {
+        display: flex; /* Muestra la lista de navegación en pantallas pequeñas */
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Inicialmente oculto fuera de la pantalla izquierda */
+        width: 80%;
+        height: 100%;
+        padding: 20px;
+        z-index: 1;
+        transition: left 0.3s ease-in; /* Agregamos una transición suave en la propiedad left */
+    }
+
+    .menu.active {
+        left: 0; /* Muestra el menú desplazándolo desde la izquierda */
+    }
+    .close-menu-button {
+        display: block;
+        float: right;
+        background-color: #e28200; /* Color de fondo del botón */
+        color: #fff; /* Color del texto del botón */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin-top: 20px; /* Espacio entre los elementos del menú y el botón de cierre */
+        font-weight: bold;
+    }
+    
+    .close-menu-button:hover {
+        background-color: e28200; /* Cambia el color al pasar el cursor sobre el botón */
+    }
+
+}
+
+
+
+/* Estilos para la sección de inicio */
+.carousel {
+    position: relative;
+    background-image: url("https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/07/14/64ac3e8c599470217672a906.jpg");
+    color: #fff;
+    text-align: center;
+    padding: 220px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease;
+    height: 280px;
+
+}
+
+.carousel-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display',  sans-serif;
+    font-weight: 400;
+}
+
+.carousel p {
+    font-size: 18px;
+    margin: 20px 200px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ffff;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+/* Estilos para los botones de flecha */
+.carousel-btn {
+    background-color: #ff5722;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 47px;
+    width: 47px;
+    display: flex; /* Establecer el botón como contenedor flexible */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    align-items: center; /* Centrar verticalmente el contenido */
+}
+
+
+.btn-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 0px;
+}
+
+.carousel-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Estilos para pantallas más pequeñas (tabletas y dispositivos móviles) */
+@media (max-width: 768px) {
+    .carousel {
+        padding: 150px 0;
+        height: 220px;
+    }
+
+    .carousel-content {
+        padding: 10px;
+    }
+
+    .carousel h1 {
+        font-size: 40px;
+    }
+
+    .carousel p {
+        font-size: 16px;
+        margin: 20px 0px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+    .btn-nav{
+        display: none;
+    }
+
+    .carousel-btn {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+    }
+}
+
+
+/* Estilos del foooterrr */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto en el footer */
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para la Primera Sección: Logo y Redes Sociales */
+.logo-social-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.logo {
+    text-align: center; 
+    margin-bottom: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logo img{
+    height: 100px;
+}
+.social-links{
+    display: flex;
+    justify-content: center; 
+}
+
+.social-links .social-link {
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0px 10px;
+    width: 20px;
+    background: #AB3939;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.social-links .social-link:hover{
+    background: transparent;
+    
+}
+
+.social-links .social-link i{
+    font-size: 21px; /* Tamaño del ícono */
+    color: #ffffff; /* Color del ícono (azul en este caso) */
+}
+
+
+/* Estilos para la Segunda Sección: Horarios de Atención */
+.hours-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Estilos para la Tercera Sección: Nuestros Locales */
+.locations-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Estilos para la Cuarta Sección: Información de Contacto */
+.contact-info-section {
+    flex: 1;
+}
+
+.footer-container h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #D86F6F;
+}
+
+.contact-info-section p strong {
+    color: #D86F6F; /* Color para resaltar detalles importantes */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #555; /* Línea divisoria superior */
+}
+.copyright p{
+    color: #bdb9b9;
+}
+
+
+
+
+/* Estilos generales para las secciones del footer */
+.logo-social-section,
+.hours-section,
+.locations-section,
+.contact-info-section {
+    flex: 1;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+
+/* Estilos específicos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apila las secciones una encima de la otra */
+    }
+
+    .logo-social-section,
+    .hours-section,
+    .locations-section,
+    .contact-info-section {
+        flex: none; /* Cancela la flexibilidad para que las secciones no se estiren */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    /* Añade espaciado entre las secciones en dispositivos móviles */
+    .logo-social-section,
+    .hours-section,
+    .locations-section,
+    .contact-info-section {
+        margin-bottom: 20px;
+    }
+}
+
